@@ -1,7 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHROTU's GitHub Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #2e2e2e 25%, transparent 25%) -50px 0,
+                        linear-gradient(225deg, #2e2e2e 25%, transparent 25%) -50px 0,
+                        linear-gradient(315deg, #2e2e2e 25%, transparent 25%),
+                        linear-gradient(45deg, #2e2e2e 25%, transparent 25%);
+            background-size: 2em 2em;
+            background-color: #ff7f00;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #3e3e3e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header {
+            font-family: 'Pacifico', cursive;
+            font-size: 3em;
+            color: #ff7f00;
+            margin-bottom: 20px;
+            animation: slideIn 2s ease-in-out;
+        }
+        .bio {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            animation: slideIn 2s ease-in-out;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .project {
+            background-color: #4e4e4e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .project h2 {
+            color: #ff7f00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 1.1em;
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .project a {
+            color: #ff7f00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #aaa;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .footer a {
+            color: #ff7f00;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .skills, .texture-pack {
+            background-color: #4e4e4e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 2s ease-in-out;
+            margin-top: 30px;
+        }
+        .skills:hover, .texture-pack:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .skills h2, .texture-pack h2 {
+            color: #ff7f00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .texture-pack p {
+            font-size: 1.1em;
+        }
+        .texture-pack a {
+            color: #ff7f00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .texture-pack a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <div class="header">KHROTU's Elegant Profile</div>
+        <div class="bio">
+            <p>I am...</p>
+            <ul>
+                <li>Founder & creator of Khronexis Studios</li>
+                <li>Python / C++ / HTML / JavaScript guy</li>
+                <li>Sweaty gamer</li>
+                <li>Simp for A_I_X, my boy friend :3</li>
+            </ul>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <h2>Website Checker</h2>
+                <img src="https://via.placeholder.com/300" alt="Website Checker Logo">
+                <p>A Python script to scrape websites and download their resources (HTML, CSS, JS, images, etc.), and check for XSS/SQL/CSRF vulnerabilities.</p>
+                <a href="https://github.com/KHROTU/websiteChecker" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h2>Bloxd Forge</h2>
+                <img src="https://i.imgur.com/SsES9QT.png" alt="Bloxd Forge Logo">
+                <p>Your one-stop solution to Bloxd gaming. Features include texture pack installer, in-app browser, modpack creation, and more.</p>
+                <a href="https://github.com/KHROTU/Bloxd-Forge" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+        <div class="skills">
+            <h2>Skills & Services</h2>
+            <ul>
+                <li>Python Development</li>
+                <li>C++ Programming</li>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Penetration Testing</li>
+                <li>Available for Hire</li>
+            </ul>
+        </div>
+        <div class="texture-pack">
+            <h2>Bloxd Texture Pack</h2>
+            <p>Check out my custom texture pack for Bloxd. Enhance your gaming experience with high-quality textures.</p>
+            <a href="https://www.dropbox.com/scl/fo/rb49qr6kr6ac1e1u7z21k/ADl_DDCulTOcjKFgzQo0Q2s?rlkey=rrn333jza7r5791gkemnze046&st=atnh7r8a&dl=0" target="_blank">Download Now</a>
+        </div>
+        <div class="footer">
+            <p>Connect with me on <a href="https://discord.gg/bwGRAC4WgE" target="_blank">Discord</a></p>
+        </div>
+    </div>
 </body>
 </html>
