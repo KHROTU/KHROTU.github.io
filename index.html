@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHROTU's Elegant Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>KHROTU - Developer Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #2e2e2e;
+            background-color: #1e1e1e;
             color: #ffffff;
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -16,30 +16,21 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow-y: auto;
-            background: linear-gradient(135deg, #2e2e2e 25%, transparent 25%) -50px 0,
-                        linear-gradient(225deg, #2e2e2e 25%, transparent 25%) -50px 0,
-                        linear-gradient(315deg, #2e2e2e 25%, transparent 25%),
-                        linear-gradient(45deg, #2e2e2e 25%, transparent 25%);
-            background-size: 2em 2em;
-            background-color: #ff7f00;
+            min-height: 100vh;
         }
         .container {
             max-width: 800px;
             padding: 20px;
-            background-color: #3e3e3e;
+            background-color: #2e2e2e;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
             margin: 20px;
-            animation: fadeIn 2s ease-in-out;
         }
         .header {
-            font-family: 'Pacifico', cursive;
-            font-size: 3em;
+            font-size: 2.5em;
             color: #ff7f00;
             margin-bottom: 20px;
-            animation: slideIn 2s ease-in-out;
         }
         .profile {
             display: flex;
@@ -47,7 +38,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 30px;
-            animation: fadeIn 2s ease-in-out;
         }
         .profile img {
             width: 150px;
@@ -58,13 +48,14 @@
         }
         .profile-info {
             text-align: center;
-            background-color: #4e4e4e;
+            background-color: #3e3e3e;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .profile-info p {
             margin: 0;
+            line-height: 1.6;
         }
         .profile-info a {
             color: #ff7f00;
@@ -81,12 +72,11 @@
             margin-top: 30px;
         }
         .grid-item {
-            background-color: #4e4e4e;
+            background-color: #3e3e3e;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeIn 2s ease-in-out;
         }
         .grid-item:hover {
             transform: translateY(-5px);
@@ -94,11 +84,12 @@
         }
         .grid-item h2 {
             color: #ff7f00;
-            font-size: 1.8em;
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
         .grid-item p {
-            font-size: 1.1em;
+            font-size: 1em;
+            line-height: 1.6;
         }
         .grid-item img {
             max-width: 100%;
@@ -117,7 +108,6 @@
             margin-top: 30px;
             font-size: 0.9em;
             color: #aaa;
-            animation: fadeIn 2s ease-in-out;
         }
         .footer a {
             color: #ff7f00;
@@ -126,54 +116,45 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">KHROTU's Elegant Profile</div>
+        <div class="header">KHROTU - Developer Profile</div>
         <div class="profile">
             <img src="https://cdn.discordapp.com/avatars/1215882225279701023/4476c5746aa59354fff2e18e0a5d058c.webp" alt="KHROTU's Profile Picture">
             <div class="profile-info">
-                <p>Founder & creator of Khronexis Studios</p>
-                <p>Python / C++ / HTML / JavaScript guy</p>
-                <p>Sweaty gamer</p>
-                <p>Simp for A_I_X, my boy friend :3</p>
-                <a href="https://discord.gg/H9uUugF77h" target="_blank">Join the server for more inquiries</a>
+                <p>Software Developer & Founder of Khronexis Studios</p>
+                <p>Proficient in Python, C++, HTML, and JavaScript</p>
+                <p>Specializing in web development and security testing</p>
+                <a href="https://discord.gg/H9uUugF77h" target="_blank">Contact me on Discord</a>
             </div>
         </div>
         <div class="grid">
             <div class="grid-item">
                 <h2>Website Checker</h2>
                 <img src="https://i.imgur.com/bHV5TkH.png" alt="Website Checker Logo">
-                <p>A Python script to scrape websites and download their resources (HTML, CSS, JS, images, etc.), and check for XSS/SQL/CSRF vulnerabilities.</p>
+                <p>A Python tool for scraping websites and checking for vulnerabilities like XSS, SQL injection, and CSRF.</p>
                 <a href="https://github.com/KHROTU/websiteChecker" target="_blank">View on GitHub</a>
             </div>
             <div class="grid-item">
-                <h2>Bloxd Forge</h2>
-                <img src="https://i.imgur.com/SsES9QT.png" alt="Bloxd Forge Logo">
-                <p>Your one-stop solution to Bloxd gaming. Features include a bunch of stuff, just check it out for yourself, it's too long for here</p>
-                <a href="https://www.bloxdforge.com" target="_blank">View in Browser</a>
+                <h2>BloxdForge</h2>
+                <img src="https://i.imgur.com/SsES9QT.png" alt="BloxdForge Logo">
+                <p>A comprehensive tool for Bloxd.io players, offering various utilities to enhance the gaming experience.</p>
+                <a href="https://www.bloxdforge.com" target="_blank">Visit BloxdForge</a>
             </div>
             <div class="grid-item">
-                <h2>Skills & Services</h2>
+                <h2>Skills & Expertise</h2>
                 <p>Python Development</p>
                 <p>C++ Programming</p>
                 <p>Web Development (HTML, CSS, JavaScript)</p>
-                <p>Penetration Testing</p>
-                <p>Available for Hire</p>
+                <p>Security Testing & Penetration</p>
+                <p>Open for collaboration and freelance opportunities</p>   
             </div>
             <div class="grid-item">
-                <h2>Bloxd Texture Pack</h2>
-                <p>Check out my custom texture pack for Bloxd. Enhance your gaming experience with high-quality textures.</p>
-                <a href="https://www.dropbox.com/scl/fo/rb49qr6kr6ac1e1u7z21k/ADl_DDCulTOcjKFgzQo0Q2s?rlkey=rrn333jza7r5791gkemnze046&st=atnh7r8a&dl=0" target="_blank">Download Now</a>
+                <h2>Snake AI</h2>
+                <p>Various implementations of AI in Snake.</p>
+                <a href="https://github.com/KHROTU/SnakeAI" target="_blank">View on GitHub</a>
             </div>
         </div>
         <div class="footer">
