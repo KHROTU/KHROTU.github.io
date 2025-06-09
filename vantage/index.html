@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo Vantage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #005DA6;
+            color: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 25px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #e6f0ff;
+        }
+        .main-container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #005DA6;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #e6f0ff;
+            color: #003366;
+        }
+        main {
+            flex: 1;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+        h2 {
+            color: #005DA6;
+            font-size: 40px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h3 {
+            color: #005DA6;
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background-color: #fafafa;
+            transition: background-color 0.2s;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li:hover {
+            background-color: #f0f4ff;
+        }
+        .update-name {
+            flex: 2;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .time, .size {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        progress {
+            flex: 1;
+            height: 20px;
+            margin: 0 15px;
+            border-radius: 5px;
+        }
+        .status {
+            flex: 1;
+            text-align: right;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .details {
+            margin-left: 15px;
+            color: #005DA6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .details:hover {
+            text-decoration: underline;
+        }
+        progress[value] {
+            appearance: none;
+            border: none;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+        progress[value]::-webkit-progress-bar {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+        progress[value]::-webkit-progress-value {
+            border-radius: 5px;
+        }
+        progress.ongoing::-webkit-progress-value {
+            background-color: #ffeb3b; /* Yellow for cancelled */
+        }
+        progress.failed::-webkit-progress-value {
+            background-color: #f44336; /* Red for failed */
+        }
+        progress.completed::-webkit-progress-value {
+            background-color: #4caf50; /* Green for completed */
+        }
+        progress[value]::-moz-progress-bar {
+            border-radius: 5px;
+        }
+        progress.ongoing::-moz-progress-bar {
+            background-color: #ffeb3b;
+        }
+        progress.failed::-moz-progress-bar {
+            background-color: #f44336;
+        }
+        progress.completed::-moz-progress-bar {
+            background-color: #4caf50;
+        }
+        .status.cancelled {
+            color: #f44336;
+        }
+        .status.failed {
+            color: #f44336;
+        }
+        .status.completed {
+            color: #4caf50;
+        }
+        #search-bar {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #fff;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lenovo Vantage</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">System Health</a></li>
+                <li><a href="#">Updates</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">System Updates</a></li>
+                <li><a href="#">Device Settings</a></li>
+                <li><a href="#">Support & Warranty</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Windows Update Manager</h2>
+            <section>
+                <h3>Ongoing (1)</h3>
+                <ul>
+                    <li>
+                        <span class="update-name">Lenovo Firmware Update v23.8.5</span>
+                        <span class="time">2025/6/9 19:32</span>
+                        <span class="size">2.51 GB</span>
+                        <progress class="ongoing" value="75" max="100"></progress>
+                        <span class="status cancelled">Cancelled</span>
+                        <a href="#" class="details">Details</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>History (34)</h3>
+                <input type="text" placeholder="Search updates..." id="search-bar">
+                <ul id="history-list">
+                    <!-- List items will be generated here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>© 2025 Lenovo. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+    <script>
+        const historyList = document.getElementById('history-list');
+        // Generate 31 failed updates in descending time order
+        const mostRecentTime = new Date('2025-06-09T19:28:00');
+        const interval = 4 * 60 * 1000; // 4 minutes
+        for (let i = 0; i < 31; i++) {
+            const time = new Date(mostRecentTime.getTime() - i * interval);
+            const timeString = `${time.getFullYear()}/${time.getMonth() + 1}/${time.getDate()} ${time.getHours().toString().padStart(2, '0')}:${time.getMinutes().toString().padStart(2, '0')}`;
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span class="update-name">Lenovo Firmware Update v23.8.5</span>
+                <span class="time">${timeString}</span>
+                <span class="size">2.51 GB</span>
+                <progress class="failed" value="100" max="100"></progress>
+                <span class="status failed">Failed</span>
+                <a href="#" class="details">Details</a>
+            `;
+            historyList.appendChild(li);
+        }
+        // Generate 3 completed updates
+        const completedUpdates = [
+            { name: 'Intel WiFi Driver Update v21.3.2', time: '2025-06-08T14:45:00', size: '150 MB' },
+            { name: 'NVMe SSD Firmware Update v1.9.4', time: '2025-06-07T09:30:00', size: '500 MB' },
+            { name: 'BIOS Security Patch v3.2.1', time: '2025-06-02T11:15:00', size: '10 MB' }
+        ];
+        completedUpdates.forEach(update => {
+            const time = new Date(update.time);
+            const timeString = `${time.getFullYear()}/${time.getMonth() + 1}/${time.getDate()} ${time.getHours().toString().padStart(2, '0')}:${time.getMinutes().toString().padStart(2, '0')}`;
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span class="update-name">${update.name}</span>
+                <span class="time">${timeString}</span>
+                <span class="size">${update.size}</span>
+                <progress class="completed" value="100" max="100"></progress>
+                <span class="status completed">Completed</span>
+                <a href="#" class="details">Details</a>
+            `;
+            historyList.appendChild(li);
+        });
+        // Search functionality
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll('#history-list li');
+            items.forEach(item => {
+                const name = item.querySelector('.update-name').textContent.toLowerCase();
+                item.style.display = name.includes(searchTerm) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
