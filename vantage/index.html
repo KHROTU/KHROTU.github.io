@@ -243,7 +243,7 @@
                     <li>
                         <span class="update-name">Lenovo Firmware Update v23.8.5</span>
                         <span class="time">2025/6/9 19:32</span>
-                        <span class="size">2.51 GB</span>
+                        <span class="size">2.16 GB</span>
                         <progress class="ongoing" value="75" max="100"></progress>
                         <span class="status cancelled">Cancelled</span>
                         <a href="#" class="details">Details</a>
@@ -274,7 +274,7 @@
             li.innerHTML = `
                 <span class="update-name">Lenovo Firmware Update v23.8.5</span>
                 <span class="time">${timeString}</span>
-                <span class="size">2.51 GB</span>
+                <span class="size">2.16 GB</span>
                 <progress class="failed" value="100" max="100"></progress>
                 <span class="status failed">Failed</span>
                 <a href="#" class="details">Details</a>
@@ -283,9 +283,9 @@
         }
         // Generate 3 completed updates
         const completedUpdates = [
-            { name: 'Intel WiFi Driver Update v21.3.2', time: '2025-06-08T14:45:00', size: '150 MB' },
-            { name: 'NVMe SSD Firmware Update v1.9.4', time: '2025-06-07T09:30:00', size: '500 MB' },
-            { name: 'BIOS Security Patch v3.2.1', time: '2025-06-02T11:15:00', size: '10 MB' }
+            { name: 'Intel WiFi Driver Update v21.3.2', time: '2025-06-08T14:45:00', size: '152 MB' },
+            { name: 'NVMe SSD Firmware Update v1.9.4', time: '2025-06-07T09:30:00', size: '497 MB' },
+            { name: 'BIOS Security Patch v3.2.1', time: '2025-06-02T11:15:00', size: '14 MB' }
         ];
         completedUpdates.forEach(update => {
             const time = new Date(update.time);
