@@ -1,165 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHROTU - Developer Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>KHROTU | Full Stack & AI/ML Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #1e1e1e;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            background-color: #2e2e2e;
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            margin: 20px;
         }
-        .header {
-            font-size: 2.5em;
-            color: #ff7f00;
-            margin-bottom: 20px;
-        }
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .profile-info {
-            text-align: center;
-            background-color: #3e3e3e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .profile-info p {
-            margin: 0;
-            line-height: 1.6;
-        }
-        .profile-info a {
-            color: #ff7f00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .profile-info a:hover {
-            text-decoration: underline;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .grid-item {
-            background-color: #3e3e3e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        .grid-item h2 {
-            color: #ff7f00;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .grid-item p {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        .grid-item img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-        .grid-item a {
-            color: #ff7f00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .grid-item a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #aaa;
-        }
-        .footer a {
-            color: #ff7f00;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563; 
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">KHROTU - Developer Profile</div>
-        <div class="profile">
-            <img src="https://cdn.discordapp.com/avatars/1215882225279701023/4476c5746aa59354fff2e18e0a5d058c.webp" alt="KHROTU's Profile Picture">
-            <div class="profile-info">
-                <p>Software Developer & Founder of Khronexis Studios</p>
-                <p>Proficient in Python, C++, HTML, and JavaScript</p>
-                <p>Specializing in web development and security testing</p>
-                <a href="https://discord.gg/H9uUugF77h" target="_blank">Contact me on Discord</a>
-            </div>
+<body class="bg-gray-900 text-gray-200">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">KHROTU</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300">
+                Get In Touch
+            </a>
         </div>
-        <div class="grid">
-            <div class="grid-item">
-                <h2>Website Checker</h2>
-                <img src="https://i.imgur.com/bHV5TkH.png" alt="Website Checker Logo">
-                <p>A Python tool for scraping websites and checking for vulnerabilities like XSS, SQL injection, and CSRF.</p>
-                <a href="https://github.com/KHROTU/websiteChecker" target="_blank">View on GitHub</a>
+    </header>
+
+    <main class="pt-24">
+        <section id="hero" class="min-h-screen flex items-center bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+                    Hi, I'm <span class="text-cyan-400">KHROTU</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    A Full Stack Developer and AI/ML enthusiast, turning complex problems into elegant software solutions. USACO Gold Medalist with a passion for high-performance code.
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 inline-block">
+                        View My Work
+                    </a>
+                    <a href="https://github.com/KHROTU" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 inline-block">
+                        GitHub Profile
+                    </a>
+                </div>
             </div>
-            <div class="grid-item">
-                <h2>BloxdForge</h2>
-                <img src="https://i.imgur.com/SsES9QT.png" alt="BloxdForge Logo">
-                <p>A comprehensive tool for Bloxd.io players, offering various utilities to enhance the gaming experience.</p>
-                <a href="https://www.bloxdforge.com" target="_blank">Visit BloxdForge</a>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://avatars.githubusercontent.com/u/161682265?v=4" alt="Your Name" class="rounded-full shadow-lg mx-auto w-64 h-64 md:w-80 md:h-80 object-cover">
+                    </div>
+                    <div class="md:w-2/3 text-lg text-gray-300">
+                        <p class="mb-4">
+                            Hello! I'm a passionate developer with a strong foundation in both full-stack web development and artificial intelligence. My journey into programming started with competitive programming, where I achieved Gold in the USA Computing Olympiad (USACO). This experience honed my problem-solving skills and my love for efficient, optimized algorithms.
+                        </p>
+                        <p class="mb-4">
+                            On the web front, I specialize in building dynamic, responsive applications using the latest technologies like Next.js, React, and Tailwind CSS. I'm comfortable working across the entire stack, from crafting beautiful user interfaces to designing robust back-end systems with databases like Supabase and MongoDB.
+                        </p>
+                        <p>
+                            My fascination with AI has led me to explore PyTorch and the world of machine learning. I'm excited by the potential to integrate intelligent features into applications and am always looking for new challenges that allow me to bridge the gap between web and AI.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item">
-                <h2>Skills & Expertise</h2>
-                <p>Python Development</p>
-                <p>C++ Programming</p>
-                <p>Web Development (HTML, CSS, JavaScript)</p>
-                <p>Security Testing & Penetration</p>
-                <p>Open for collaboration and freelance opportunities</p>   
+        </section>
+
+        <section id="skills" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">My Tech Stack</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-6">Full Stack Development</h3>
+                        <div class="flex justify-center flex-wrap gap-4">
+                            <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,express,jquery,tailwind&perline=5" alt="Full Stack Skills" />
+                        </div>
+                    </div>
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-6">AI/ML & Data</h3>
+                        <div class="flex justify-center flex-wrap gap-4">
+                            <img src="https://skillicons.dev/icons?i=anaconda,python,pytorch,tensorflow,sklearn,opencv&perline=6" alt="AI/ML Skills" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-center text-cyan-400 mb-6">Databases & Tools</h3>
+                        <div class="flex justify-center flex-wrap gap-4">
+                             <img src="https://skillicons.dev/icons?i=mongodb,postgres,supabase,firebase,git,github,docker&perline=7" alt="Database and Tool Skills" />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid-item">
-                <h2>Snake AI</h2>
-                <p>Various implementations of AI in Snake.</p>
-                <a href="https://github.com/KHROTU/SnakeAI" target="_blank">View on GitHub</a>
+        </section>
+
+        <section id="projects" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Bloxd-Forge-Web</h3>
+                            <p class="text-gray-400 mb-4">
+                                A utility website for the online game Bloxd, featuring a jQuery front-end and a Flask back-end.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">jQuery</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">JavaScript (ES6+)</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">HTML5</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">CSS</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/KHROTU/Bloxd-Forge-Web" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                                </a>
+                                <a href="https://www.bloxdforge.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">Snap-Solver-Plus</h3>
+                            <p class="text-gray-400 mb-4">
+                                A Python web application that utilizes multimodal LLMs to analyze and solve problems from user-provided images.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">JavaScript (ES6+)</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">HTML5</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">CSS</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/KHROTU/Snap-Solver-Plus" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">schematic-diffusion</h3>
+                            <p class="text-gray-400 mb-4">
+                                A text-conditional 3D diffusion model in PyTorch for generating Minecraft schematics from natural language prompts.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">PyTorch</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">Python</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/KHROTU/schematic-diffusion" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-white">GraphIt!</h3>
+                            <p class="text-gray-400 mb-4">
+                                An interactive web tool for creating and visualizing graphs, tailored for A-level and IGCSE educational curricula.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">Next.js</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">React</span>
+                                <span class="bg-cyan-900 text-cyan-300 text-sm font-medium px-2.5 py-0.5 rounded">Tailwind CSS</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/KHROTU/graphit" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                                </a>
+                                <a href="https://graphit.dev" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-gray-900 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+                I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to connect!
+            </p>
+            <a href="mailto:[your-email@example.com]" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold text-xl py-4 px-10 rounded-lg transition-all duration-300 mb-10">
+                Say Hello
+            </a>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://github.com/KHROTU" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="mailto:3o65iduqd@mozmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2025 KHROTU. All rights reserved.</p>
         </div>
-        <div class="footer">
-            <p>Connect with me on <a href="https://discord.gg/bwGRAC4WgE" target="_blank">Discord</a></p>
-        </div>
-    </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-900', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-gray-900', 'shadow-lg');
+            }
+        };
+    </script>
 </body>
 </html>
