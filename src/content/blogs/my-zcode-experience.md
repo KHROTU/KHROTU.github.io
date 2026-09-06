@@ -1,6 +1,6 @@
 ---
 title: "My ZCode Experience"
-date: 2026-09-06
+date: '2026-09-06'
 slug: my-zcode-experience
 ---
 
